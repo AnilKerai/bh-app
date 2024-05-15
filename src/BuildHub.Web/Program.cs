@@ -1,4 +1,6 @@
+using BuildHub.Shared.Interfaces;
 using BuildHub.Web.Components;
+using BuildHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder
+    .Services
+        .AddScoped<IFormFactor, FormFactor>()
+    ;
 
 var app = builder.Build();
 
@@ -17,13 +24,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    .AddAdditionalAssemblies(typeof(BuildHub.Shared._Imports).Assembly);
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode()
+    .AddAdditionalAssemblies(typeof(BuildHub.Shared._Imports).Assembly);
 
 app.Run();

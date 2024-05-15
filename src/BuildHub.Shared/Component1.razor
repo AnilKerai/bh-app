@@ -1,3 +1,16 @@
-﻿<div class="my-component">
+﻿@using BuildHub.Shared.Interfaces
+@inject IFormFactor FormFactor
+
+<div class="my-component">
+    <p>You are running on:</p>
+
+    <h3>@Factor</h3>
+    <h3>@Platform</h3>
+
     This component is defined in the <strong>BuildHub.Shared</strong> library.
 </div>
+
+@code {
+    private string Factor => FormFactor.GetFormFactor();
+    private string Platform => FormFactor.GetPlatform();
+}

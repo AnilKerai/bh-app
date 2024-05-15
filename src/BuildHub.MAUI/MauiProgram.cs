@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BuildHub.MAUI.Services;
+using BuildHub.Shared;
+using BuildHub.Shared.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace BuildHub.MAUI;
 
@@ -6,6 +9,8 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
+		InteractiveRenderSettings.ConfigureBlazorHybridRenderModes();
+		
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
@@ -20,6 +25,8 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
+
+		builder.Services.AddSingleton<IFormFactor, FormFactor>();
 
 		return builder.Build();
 	}
