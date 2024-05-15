@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Components\Layout\MainLayout.razor" />
+    <AdditionalFiles Include="Components\Layout\NavMenu.razor" />
+    <AdditionalFiles Include="Components\Pages\Counter.razor" />
+    <AdditionalFiles Include="Components\Pages\Home.razor" />
+    <AdditionalFiles Include="Components\Pages\Weather.razor" />
+    <AdditionalFiles Include="Components\Routes.razor" />
+    <AdditionalFiles Include="_Imports.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidAsset Include="wwwroot\css\app.css" />
+    <AndroidAsset Include="wwwroot\css\bootstrap\bootstrap.min.css" />
+    <AndroidAsset Include="wwwroot\css\bootstrap\bootstrap.min.css.map" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildHub.MAUI", "src\BuildHub.MAUI\BuildHub.MAUI.csproj", "{63726E0B-E9A4-43AF-BEB0-1F85FAFC4769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildHub.Web", "src\BuildHub.Web\BuildHub.Web.csproj", "{65FECFAD-3E0F-4BAD-A4B6-97595F6F3E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildHub.Shared", "src\BuildHub.Shared\BuildHub.Shared.csproj", "{81B50E99-F79D-42BC-A3EA-FAEB081527A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63726E0B-E9A4-43AF-BEB0-1F85FAFC4769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63726E0B-E9A4-43AF-BEB0-1F85FAFC4769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63726E0B-E9A4-43AF-BEB0-1F85FAFC4769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63726E0B-E9A4-43AF-BEB0-1F85FAFC4769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FECFAD-3E0F-4BAD-A4B6-97595F6F3E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FECFAD-3E0F-4BAD-A4B6-97595F6F3E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FECFAD-3E0F-4BAD-A4B6-97595F6F3E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FECFAD-3E0F-4BAD-A4B6-97595F6F3E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B50E99-F79D-42BC-A3EA-FAEB081527A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B50E99-F79D-42BC-A3EA-FAEB081527A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B50E99-F79D-42BC-A3EA-FAEB081527A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B50E99-F79D-42BC-A3EA-FAEB081527A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
