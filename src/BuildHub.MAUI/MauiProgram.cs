@@ -1,4 +1,5 @@
-﻿using BuildHub.MAUI.Services;
+﻿using Auth0.OidcClient;
+using BuildHub.MAUI.Services;
 using BuildHub.Shared;
 using BuildHub.Shared.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -27,6 +28,14 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddSingleton<IFormFactor, FormFactor>();
+		builder.Services.AddSingleton(new Auth0Client(new Auth0ClientOptions
+		{
+			Domain = "dev-j7idk0ol3eitivex.us.auth0.com",
+			ClientId = "P5M7RkGGi9jB2qKKv4LVCMbZTtofRhp3",
+			RedirectUri = "myapp://callback",
+			PostLogoutRedirectUri = "myapp://callback",
+			Scope = "openid profile email"
+		}));
 
 		return builder.Build();
 	}

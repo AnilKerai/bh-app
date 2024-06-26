@@ -15,4 +15,8 @@
     <_ContentIncludedByDefault Remove="Components\Layout\NavMenu.razor" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Auth0.OidcClient.MAUI" Version="1.0.1" />
+  </ItemGroup>
+
 </Project>
